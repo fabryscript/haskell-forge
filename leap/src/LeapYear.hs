@@ -1,4 +1,7 @@
 module LeapYear (isLeapYear) where
 
+divisibleBy :: Integer -> Integer -> Bool
+divisibleBy n factor = (n `mod` factor) == 0
+
 isLeapYear :: Integer -> Bool
-isLeapYear year = error "You need to implement this function."
+isLeapYear year = year `divisibleBy` 4 && (not (year `divisibleBy` 100) || year `divisibleBy` 400)
