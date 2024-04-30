@@ -1,4 +1,4 @@
 module ReverseString (reverseString) where
 
-reverseString :: String -> String
-reverseString str = error "You need to implement this function."
+reverseString :: String -> [Char]
+reverseString = reverse
